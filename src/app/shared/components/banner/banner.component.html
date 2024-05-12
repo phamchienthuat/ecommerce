@@ -1,0 +1,26 @@
+<swiper-container pagination="true" pagination-clickable="true">
+
+  <swiper-slide lazy="true" *ngFor="let item of data">
+    <div class="relative bg-[#eff0ed] flex py-6 px-[6.5rem]">
+      <div class="w-1/2 flex items-center justify-start ">
+        <div>
+          <p class="text-[20px] fadeInUp">{{ item.description }}</p>
+          <h2 class="text-[100px] fadeInUp">{{ item.title }}</h2>
+          <div><a href="" class=" duration-100 py-2 px-7 border border-[#000] text-base hover:bg-[#821f40] hover:border-[#821f40] hover:text-white"> Shop Collection </a></div>
+        </div>
+      </div>
+      <div class="w-1/2 text-right flex justify-end">
+        <div class="w-[{{item.width}}] relative z-10">
+          <img src="{{item.image}}" loading="lazy" width="100%" height="auto">
+        </div>
+        <div
+          class="bg-[rgba(41,194,227,0.3)] inline-block h-[550px] absolute right-[2%] w-[550px] rounded-[50%] top-[14%] ">
+        </div>
+        <img src="https://shofy-fashion.botble.com/storage/fashion/sliders/shape-2.png"
+          class="absolute right-[50%] top-[14%]" alt="The Clothing Collection">
+      </div>
+
+    </div>
+  </swiper-slide>
+
+</swiper-container>
