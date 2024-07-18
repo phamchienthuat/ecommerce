@@ -1,0 +1,19 @@
+<swiper-container [slidesPerView]="5" [spaceBetween]="20"  [loop]="true" [speed]="100">
+  <swiper-slide *ngFor="let item of data">
+    <div class="relative bg-[#f2f3f5] category z-[1] cursor-pointer">
+      <div>
+        <a href="{{item.link}}">
+          <img src="{{item.image}}" alt="{{item.name}}" class="w-full h-[250px]">
+        </a>
+      </div>
+      <div class="category-content items-center bg-transparent flex flex-col justify-center absolute z-[1] inset-3.5 after:bg-white after:content-[''] after:h-full after:absolute after:w-full after:z-[-1] after:left-0 after:top-0 after:opacity-0 after:translate-y-2.5 after:invisible after:transition-all after:duration-[0.3s] after:ease-[ease-out] after:delay-[0s]">
+        <span class="text-sm mb-1 transition-all duration-[0.3s] ease-[ease-out] delay-[0s] opacity-0 translate-y-2.5 invisible">{{item.quantity}} sản phẩm</span>
+        <h3 class="mb-3 font-medium delay-[0s] opacity-0 translate-y-2.5 invisible hover:text-red-primary"><a href="{{item.link}}">{{item.name}}</a></h3>
+        <div class="delay-[0s] opacity-0 translate-y-2.5 invisible">
+          <a href="{{item.link}}"
+          class="py-1 px-3 text-sm  hover:text-white border border-[#010f1c] hover:bg-red-primary hover:border-red-primary transition-all duration-300 ease-out flex items-center justify-center gap-1 mb-5" >Cửa hàng</a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>

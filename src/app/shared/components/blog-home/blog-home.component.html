@@ -1,0 +1,37 @@
+<div class="grid grid-cols-3 gap-6">
+  <div class="mb-10 blog" *ngFor="let item of data">
+    <div class="relative overflow-hidden">
+      <a href="">
+        <img src="{{item.image}}" alt=""
+          class="w-full h-[325px] object-cover transition-all duration-[0.3s] ease-[ease-out] delay-[0s]"
+          loading="lazy">
+      </a>
+      <div class="absolute z-[1] right-2.5 top-2.5">
+        <span class="bg-white text-[#010f1c] text-sm leading-none px-4 py-[5px]">{{item.date |
+          date:'dd/MM/yyyy'}}</span>
+      </div>
+    </div>
+    <div class="pt-6">
+      <div class="mb-1 mr-[1px] flex items-center gap-1">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.636 8.14182L8.14808 12.6297C8.03182 12.7461 7.89375 12.8384 7.74178 12.9014C7.58981 12.9644 7.42691 12.9969 7.26239 12.9969C7.09788 12.9969 6.93498 12.9644 6.78301 12.9014C6.63104 12.8384 6.49297 12.7461 6.37671 12.6297L1 7.25926V1H7.25926L12.636 6.37671C12.8691 6.61126 13 6.92854 13 7.25926C13 7.58998 12.8691 7.90727 12.636 8.14182V8.14182Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4.12964 4.12988H4.13694" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <div class="flex" *ngFor="let tag of item.tags"><a href="{{tag.link}}"
+            class="hover:text-red-primary relative after:content-[''] after:w-0 after:absolute after:h-[1px] after:bg-red-primary after:right-0 after:left-auto after:bottom-[1px] after:transition-all after:duration-300 after:ease-out hover:after:w-full hover:after:left-0 hover:after:right-auto">{{tag.name}}
+          </a></div>
+      </div>
+      <h3 class="text-2xl"> <a href="">{{item.title}}</a></h3>
+    </div>
+  </div>
+</div>
+<div class=" w-full flex justify-center items-center">
+  <a href="" class="btn-outline">
+    Discover More
+  </a>
+</div>

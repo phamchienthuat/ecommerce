@@ -1,0 +1,19 @@
+<div class="w-full">
+  <ul class="flex justify-center">
+    <li *ngFor="let tab of tabs; let i = index" (click)="selectTab(i)" [class.active]="selectedTab === i" class="cursor-pointer ml-7 text-xl relative after:bg-[#ced2d6] after:content-[''] after:h-1.5 after:left-[-17px] after:absolute after:w-1.5 after:rounded-[50%] after:top-2/4 after:-translate-y-2/4
+    " [class.text-red-primary]="selectedTab === i" [class.text-gray-400]="selectedTab !== i">
+      {{ tab.label }}
+    </li>
+  </ul>
+  <div class="tab-content p-4">
+    <div *ngIf="selectedTab === 0" class="grid grid-cols-4 gap-6">
+      <div *ngFor="let product of dataProduct">
+        <product [data]="product"></product>
+      </div>
+    </div>
+    <div *ngIf="selectedTab === 1">Content for Tab 2</div>
+    <div *ngIf="selectedTab === 2">Content for Tab 3</div>
+    <div *ngIf="selectedTab === 3">Content for Tab 4</div>
+    <div *ngIf="selectedTab === 4">Content for Tab 5</div>
+  </div>
+</div>

@@ -35,6 +35,15 @@ module.exports = {
       boxShadow: {
         "auth-card": "0 30px 70px rgba(1,15,28,.1)",
       },
+      transitionProperty: {
+        'opacity-visibility-transform': 'opacity, visibility, transform',
+      },
+      transitionTimingFunction: {
+        'cubic-custom': 'cubic-bezier(.71, 1.7, .77, 1.24)',
+      },
+      transitionDuration: {
+        '300': '300ms',
+      },
     },
   },
   variants: {},

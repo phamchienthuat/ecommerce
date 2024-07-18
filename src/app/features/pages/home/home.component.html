@@ -2,3 +2,39 @@
 <section>
   <app-banner [data]="bannerData"></app-banner>
 </section>
+<section class="px-[6.5rem] py-[6rem]">
+  <div class="w-full text-center">
+    <span class="text-red-primary inline-block text-lg font-normal relative z-[1]">
+      Cửa hàng theo thể loại
+    </span>
+    <h3 class="text-[2.75rem] mb-5 font-bold">
+      Phổ biến trên cửa hàng Shofy
+    </h3>
+  </div>
+  <app-category [data]="categoryData"></app-category>
+</section>
+<section class="px-[6.5rem] py-[6rem]">
+  <div class="w-full text-center">
+    <span class="text-red-primary inline-block text-lg font-normal relative z-[1]">Tất cả sản phẩm</span>
+    <h3 class="text-[2.75rem] mb-5 font-bold">
+      Sản phẩm kiểu dáng được khách hàng yêu thích
+    </h3>
+  </div>
+  <!-- <app-product></app-product> -->
+  <tab-product-home></tab-product-home>
+</section>
+<section class="pb-[135px] pt-[130px] bg-[#f6f6f6]">
+  <review-home></review-home>
+</section>
+<section class="pb-[135px] pt-[130px] px-[6.5rem]">
+  <div class="w-full text-center">
+    <span class="text-red-primary inline-block text-lg font-normal relative z-[1]">Our Blog & News</span>
+    <h3 class="text-[2.75rem] mb-5 font-bold">
+      Latest News & Articles
+    </h3>
+  </div>
+  <blog-home></blog-home>
+</section>
+<section class="py-8 px-[6.5rem]">
+  <feature-area></feature-area>
+</section>
